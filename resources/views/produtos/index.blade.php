@@ -21,8 +21,18 @@
                 </tr>
             </thead>
             <tbody>
-                
-                
+                @forelse($produtos as $produto)
+                    <tr>
+                        <td>{{ $produto->id }}</td>
+                        <td>{{ $produto->nome }}</td>
+                        <td>{{ number_format($produto->preco, 2, ',', '.') }}</td>
+                        <td>{{ $produto->categoria->nome}}</td>
+                    </tr>
+                @empty
+                    <tr>
+                        <td colspan="4">Nenhum produto cadastrado.</td>
+                    </tr>
+                @endforelse
             </tbody>
         </table>
     </div>

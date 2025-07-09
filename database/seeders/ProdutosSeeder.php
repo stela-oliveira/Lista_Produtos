@@ -1,12 +1,17 @@
-// database/seeders/ProdutoSeeder.php
+<?php
+
 namespace Database\Seeders;
 
+use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
-use App\Models\Categoria; // Importe o model Categoria
-use App\Models\Produto;   // Importe o model Produto
+use App\Models\Categoria; 
+use App\Models\Produto; 
 
-class ProdutoSeeder extends Seeder
+class ProdutosSeeder extends Seeder
 {
+    /**
+     * Run the database seeds.
+     */
     public function run(): void
     {
         // Criar algumas categorias

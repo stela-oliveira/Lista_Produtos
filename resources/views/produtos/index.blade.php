@@ -26,7 +26,7 @@
                         <td>{{ $produto->id }}</td>
                         <td>{{ $produto->nome }}</td>
                         <td>{{ number_format($produto->preco, 2, ',', '.') }}</td>
-                        <td>{{ $produto->categoria->nome}}</td>
+                        <td>{{ $produto->categoria?->nome}}</td>
                     </tr>
                 @empty
                     <tr>

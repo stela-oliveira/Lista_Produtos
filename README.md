@@ -1,61 +1,120 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# 🛒 Sistema de Gerenciamento de Produtos
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Este é um projeto desenvolvido com **Laravel** e **Bootstrap**, seguindo o padrão **MVC**, que permite:
 
-## About Laravel
+- 📦 Gerenciar produtos (cadastrar, listar, editar, excluir)
+- 🏷️ Gerenciar categorias (cadastrar, listar, editar, excluir)
+- 💡 Interface simples com Bootstrap 5 e ícones via Bootstrap Icons
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+---
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## 🚀 Funcionalidades
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+### Produtos
+- Listar todos os produtos
+- Cadastrar novo produto (com nome, preço e categoria)
+- Editar produto existente
+- Excluir produto
 
-## Learning Laravel
+### Categorias
+- Listar todas as categorias
+- Cadastrar nova categoria
+- Editar categoria existente
+- Excluir categoria
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+---
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+## ⚙️ Tecnologias Utilizadas
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+- Laravel (Framework PHP)
+- Blade (Template engine do Laravel)
+- Bootstrap 5 (CSS e componentes)
+- Bootstrap Icons (Ícones)
+- MySQL ou outro banco compatível
+- Eloquent ORM
 
-## Laravel Sponsors
+---
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+## 🧱 Estrutura do Projeto
 
-### Premium Partners
+```
+├── app/
+│   └── Http/
+│       └── Controllers/
+│           ├── ProdutoController.php
+│           └── CategoriaController.php
+├── app/
+│   └── Models/
+│       ├── Produto.php
+│       └── Categoria.php
+├── database/
+│   └── migrations/
+│       ├── create_produtos_table.php
+│       └── create_categorias_table.php
+│   └── seeders/
+│       └── ProdutosSeeder.php
+├── resources/
+│   └── views/
+│       ├── produtos/
+│       │   ├── index.blade.php
+│       │   ├── create.blade.php
+│       │   └── edit.blade.php
+│       └── categorias/
+│           ├── index.blade.php
+│           ├── create.blade.php
+│           └── edit.blade.php
+├── routes/
+│   └── web.php
+```
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+---
 
-## Contributing
+## ⚡ Como Executar o Projeto
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+1. **Clone o repositório**
+   ```bash
+   git clone https://github.com/seuusuario/seu-repo.git
+   cd seu-repo
+   ```
 
-## Code of Conduct
+2. **Instale as dependências**
+   ```bash
+   composer install
+   ```
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+3. **Configure o `.env`**
+   ```bash
+   cp .env.example .env
+   php artisan key:generate
+   ```
 
-## Security Vulnerabilities
+   Edite o `.env` e configure o banco de dados:
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+   ```env
+   DB_DATABASE=nome_do_banco
+   DB_USERNAME=seu_usuario
+   DB_PASSWORD=sua_senha
+   ```
 
-## License
+4. **Rode as migrations e seeders**
+   ```bash
+   php artisan migrate --seed
+   ```
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+5. **Inicie o servidor**
+   ```bash
+   php artisan serve
+   ```
+
+6. **Acesse no navegador:**
+   ```
+   http://localhost:8000/produtos
+   ```
+
+---
+
+## 👨‍💻 Desenvolvido por
+
+**Stela de Oliveira** - (https://github.com/stela-oliveira)
+**Nayara Lopes Marx** - (https://github.com/nayara-marx)
+Curso: Engenharia de Software – Universidade do Contestado

@@ -35,7 +35,7 @@ Este é um projeto desenvolvido com **Laravel** e **Bootstrap**, seguindo o padr
 
 ---
 
-## 🧱 Estrutura do Projeto
+## 🧱 Estrutura principal do Projeto
 
 ```
 ├── app/

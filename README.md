@@ -115,6 +115,8 @@ Este é um projeto desenvolvido com **Laravel** e **Bootstrap**, seguindo o padr
 
 ## 👨‍💻 Desenvolvido por
 
-**Stela de Oliveira** - (https://github.com/stela-oliveira)
-**Nayara Lopes Marx** - (https://github.com/nayara-marx)
-Curso: Engenharia de Software – Universidade do Contestado
+- **Stela de Oliveira** - (https://github.com/stela-oliveira)
+- **Nayara Lopes Marx** - (https://github.com/nayara-marx)
+
+---
+#### Curso: Engenharia de Software – Universidade do Contestado

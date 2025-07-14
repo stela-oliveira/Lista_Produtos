@@ -1,59 +1,62 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <title>Gerenciamento de Produtos</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 20px;
-            background-color: rgb(230, 233, 255);
-            border-radius: 5px;
-        }
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f1fdf4;
+    color: #2e4a3a;
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+}
 
-        header {
-            background-color: rgb(141, 167, 252);
-            color: white;
-            padding: 20px;
-            text-align: center;
-            border-radius: 5px;
-        }
+header {
+    background-color: #4caf50;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+}
 
-        nav {
-            background-color: rgb(83, 123, 255);
-            overflow: hidden;
-            margin-bottom: 20px;
-            border-radius: 5px;
-        }
+nav {
+    background-color: #66bb6a;
+    margin: 20px 0;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
 
-        nav a {
-            float: left;
-            display: block;
-            color: #fff;
-            text-align: center;
-            padding: 14px 20px;
-            text-decoration: none;
-        }
+nav a {
+    color: #fff;
+    padding: 14px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s;
+    border-radius: 5px;
+}
 
-        nav a:hover {
-            background-color: rgb(56, 102, 253);
-            ;
-        }
+nav a:hover {
+    background-color: #388e3c;
+}
 
-        main {
-            background-color: white;
-            padding: 20px;
-            border-radius: 5px;
-        }
+main {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 100, 0, 0.1);
+}
 
-        ul {
-            margin-top: 10px;
-            padding-left: 20px;
-        }
+ul {
+    margin-top: 10px;
+    padding-left: 20px;
+    line-height: 1.8;
+}
     </style>
 </head>
-
 <body>
     <header>
         <h1>Gerenciamento de Produtos</h1>
@@ -78,5 +81,4 @@
         </ul>
     </main>
 </body>
-
 </html>

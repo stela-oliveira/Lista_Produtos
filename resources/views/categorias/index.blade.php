@@ -14,8 +14,8 @@
 
         <a href="{{ route('categorias.create') }}" class="btn btn-success mb-3">Nova Categoria</a>
 
-        <table class="table table-striped">
-            <thead class="table-dark">
+       <table class="table table-striped table-hover">
+            <thead class="table-success">
                 <tr>
                     <th>ID</th>
                     <th>Nome</th>
@@ -28,14 +28,13 @@
                         <td>{{ $categoria->id }}</td>
                         <td>{{ $categoria->nome }}</td>
                         <td>
-                            <a href="{{ route('categorias.edit', $categoria->id) }}" class="btn btn-sm btn-primary">
+                            <a href="{{ route('categorias.edit', $categoria->id) }}" class="btn btn-sm btn-success">
                                 <i class="bi bi-pencil"></i>
                             </a>
-
                             <form action="{{ route('categorias.destroy', $categoria->id) }}" method="POST" class="d-inline">
                                 @csrf
                                 @method('DELETE')
-                                <button class="btn btn-sm btn-danger" onclick="return confirm('Tem certeza?')">
+                                <button class="btn btn-sm btn-success" onclick="return confirm('Tem certeza?')">
                                     <i class="bi bi-trash"></i>
                                 </button>
                             </form>

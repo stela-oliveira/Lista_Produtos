@@ -34,8 +34,8 @@
             </select>
         </div>
 
-        <button class="btn btn-primary">Salvar Alterações</button>
-        <a href="{{ route('produtos.index') }}" class="btn btn-secondary">Cancelar</a>
+        <button class="btn btn-success">Salvar Alterações</button>
+        <a href="{{ route('produtos.index') }}" class="btn btn-danger">Cancelar</a>
     </form>
 </div>
 </body>

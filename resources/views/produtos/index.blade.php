@@ -16,8 +16,8 @@
         <a href="{{ route('produtos.create') }}" class="btn btn-success mb-3">
             <i class="bi bi-plus-circle"></i> Novo Produto
         </a>
-        <table class="table table-striped table-hover">
-            <thead class="table-dark">
+       <table class="table table-striped table-hover">
+            <thead class="table-success">
                 <tr>
                     <th scope="col">ID</th>
                     <th scope="col">Produto</th>
@@ -34,14 +34,14 @@
                         <td>{{ number_format($produto->preco, 2, ',', '.') }}</td>
                         <td>{{ $produto->categoria?->nome }}</td>
                         <td>
-                            <a href="{{ route('produtos.edit', $produto->id) }}" class="btn btn-sm btn-primary">
+                            <a href="{{ route('produtos.edit', $produto->id) }}" class="btn btn-sm btn-success">
                                 <i class="bi bi-pencil"></i>
                             </a>
 
                             <form action="{{ route('produtos.destroy', $produto->id) }}" method="POST" class="d-inline">
                                 @csrf
                                 @method('DELETE')
-                                <button type="submit" class="btn btn-sm btn-danger"
+                                <button type="submit" class="btn btn-sm btn-success"
                                     onclick="return confirm('Tem certeza que deseja excluir?')">
                                     <i class="bi bi-trash"></i>
                                 </button>

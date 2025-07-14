@@ -20,8 +20,8 @@
                 <input type="text" name="nome" class="form-control" value="{{ $categoria->nome }}" required>
             </div>
 
-            <button class="btn btn-primary">Atualizar</button>
-            <a href="{{ route('categorias.index') }}" class="btn btn-secondary">Cancelar</a>
+            <button class="btn btn-success">Atualizar</button>
+            <a href="{{ route('categorias.index') }}" class="btn btn-danger">Cancelar</a>
         </form>
     </div>
 </body>
